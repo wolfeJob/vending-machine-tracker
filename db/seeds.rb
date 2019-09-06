@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Owner.destroy_all
+
+owner = Owner.create(name: "Sam's Snacks")
+dons  = owner.machines.create(location: "Don's Mixed Drinks")
+skittle = dons.snacks.create(name:"skittles", price: 2.00)
+starburst = dons.snacks.create(name:"skittles", price: 2.00)
